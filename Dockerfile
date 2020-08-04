@@ -35,4 +35,7 @@ RUN echo 8933bad161af4178b1185d1a37fbf41ea5269c55 > $ANDROID_HOME/licenses/andro
 RUN echo d56f5187479451eabf01fb78af6dfcb131a6481e >> $ANDROID_HOME/licenses/android-sdk-license
 RUN echo 84831b9409646a918e30573bab4c9c91346d8abd > $ANDROID_HOME/licenses/android-sdk-preview-license
 
+# Update and install using sdkmanager 
+RUN echo yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
+
 ENV PATH ${SDK_HOME}/bin:$PATH
